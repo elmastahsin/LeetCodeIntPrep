@@ -12,8 +12,8 @@ public class AddTwoNumbers {
         }
     }
     public ListNode addTwoNumbers(ListNode l1,ListNode l2){
-        ListNode dummyHead = new ListNode(0);
-        ListNode p = l1, q = l2, curr = dummyHead;
+        ListNode result = new ListNode(0);
+        ListNode p = l1, q = l2, curr = result;
         int carry = 0;
 
         while(p != null || q != null){
@@ -33,6 +33,6 @@ public class AddTwoNumbers {
             curr.next = new ListNode(carry);
         }
 
-        return dummyHead.next;
+        return result.next;
     }
 }
